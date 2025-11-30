@@ -50,11 +50,15 @@ df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.no
 df_US = df[df['job_country'] == 'United States']
 ```
 
-## 1. What are the most demanded skills for the top 3 most popular data roles?
+# The Analysis
+
+## 1. Skill Demand Analysis
+
+## What are the most demanded skills for the top 3 most popular data roles?
 
 **Goal:** To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-**Notebook:** [3_Skills_Demand](/3_Projects/2_Skill_Demand.ipynb)
+**Notebook:** [2_Skills_Demand](/3_Projects/2_Skill_Demand.ipynb)
 
 ### Visualize Data
 
@@ -72,7 +76,7 @@ for i, job_title in enumerate(job_titles):
 ```
 
 ## Results
-![Visualizatoion of top skills for data nerds](/3_Projects/images/image.png)
+![Visualizatoion of top skills for data nerds](/3_Projects/images/skill_demand.png)
 
 ## Insights
 
@@ -81,3 +85,95 @@ for i, job_title in enumerate(job_titles):
 * Python is the most versatile skill, highly demanded across all three roles, but it is the undisputed #1 requirement for Data Scientists and Data Engineers.
 
 * Data Engineers require more specialized technical infrastructure skills (AWS, Azure, Spark) compared to Data Analysts, who focus more on general data manipulation tools (Excel, Tableau).
+
+## 2. Skill Trend Analysis
+## How are in-demand skills trending for Data Analysts?
+
+**Goal:** To analyze how the demand for top data analyst skills evolved throughout 2023. I filtered for Data Analyst positions and grouped the skills by the month of the job postings to identify trends.
+
+**Notebook:** [3_Skills_Trend](/3_Projects/3_Skills_Trend.ipynb)
+
+### Visualize Data
+
+```python
+from matplotlib.ticker import PercentFormatter
+
+df_plot = df_DA_US_percent.iloc[:, :5]
+sns.lineplot(data=df_plot, dashes=False, legend='full', palette='tab10')
+
+plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+```
+
+## Results
+![Visualizatoion of trending skills](/3_Projects/images/skill_trend.png)
+
+## Insights
+
+* SQL remains the most consistently demanded skill throughout the year, although it shows a gradual decrease in demand.
+
+* Excel experienced a significant increase in demand starting around September, surpassing both Python and Tableau by the end of the year.
+
+* Python and Tableau show relatively stable demand throughout the year with some fluctuations but remain essential skills for data analysts.
+
+## 3. Salary Analysis
+##  How well do jobs and skills pay for Data Analysts?
+**Goal:** To determine which roles and skills pay the most. I analyzed the salary distributions for common data roles and identified the highest-paying skills for Data Analysts.
+
+**Notebook:** [4_Skills_Analysis](/3_Projects/4_Salary_Analysis.ipynb)
+
+### Visualize Data
+
+```python
+from matplotlib.ticker import PercentFormatter
+
+df_plot = df_DA_US_percent.iloc[:, :5]
+sns.lineplot(data=df_plot, dashes=False, legend='full', palette='tab10')
+
+plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+```
+
+## Results
+![Analysing salary](/3_Projects/images/box_plot.png)
+
+## Insights
+
+* Senior Roles Pay More: Unsurprisingly, Senior Data Scientists and Senior Data Engineers command the highest median salaries, often exceeding $150k.
+
+* Data Analyst Salaries: The median salary for Data Analysts is lower and has a tighter distribution, suggesting less variability in pay compared to engineering roles.
+
+* Outliers: There are significant high-salary outliers in Data Engineering, indicating that specialized expertise in this field can lead to exceptional compensation.
+
+![Analysing salary](/3_Projects/images/salary_analysis.png)
+
+## 4. Optimal Skills Analysis
+## What are the most optimal skills to learn for Data Analysts?
+
+**Goal:** To identify the "optimal" skills to learn—those that are both high demand (easy to get a job) and high paying (good salary). I visualized this by plotting median salary against the percentage of job postings requiring the skill.
+
+**Notebook:** [5_Optimal_Skills](/3_Projects/3_Skills_Trend.ipynb)
+
+### Visualize Data
+
+```python
+# Create scatter plot for Optimal Skills
+from adjustText import adjust_text
+import matplotlib.pyplot as plt
+
+plt.scatter(df_DA_skills_high_demand['skill_percent'], df_DA_skills_high_demand['median_salary'])
+plt.show()
+```
+
+## Results
+![Visualizatoion of trending skills](/3_Projects/images/optimal_skills.png)
+
+## Insights
+
+* The "Sweet Spot": Skills like Python and Tableau fall into the optimal quadrant—they are relatively high in demand (appearing in 20-30% of postings) and offer competitive salaries.
+
+* High Pay, Niche Demand: Skills like Oracle and SQL Server offer high salaries but are less frequently requested, making them specialized "niche" skills.
+
+* Foundational Skills: Excel and SQL are ubiquitous (high demand) but offer lower median salaries, reinforcing their role as entry-level necessities rather than salary drivers.
