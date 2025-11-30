@@ -72,7 +72,7 @@ for i, job_title in enumerate(job_titles):
 ```
 
 ## Results
-![Visualizatoion of top skills for data nerds](image.png)
+![Visualizatoion of top skills for data nerds](/3_Projects/images/image.png)
 
 ## Insights
 
