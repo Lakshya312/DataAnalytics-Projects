@@ -177,3 +177,7 @@ plt.show()
 * High Pay, Niche Demand: Skills like Oracle and SQL Server offer high salaries but are less frequently requested, making them specialized "niche" skills.
 
 * Foundational Skills: Excel and SQL are ubiquitous (high demand) but offer lower median salaries, reinforcing their role as entry-level necessities rather than salary drivers.
+
+## Conclusion
+
+This analysis provided a data-driven roadmap for navigating the Data Analyst job market. By dissecting job postings to map skill demand against salary data, I identified SQL and Python as non-negotiable foundational skills, while pinpointing 'optimal' technologies (like Tableau) that offer the highest return on investment for learners. These findings move beyond anecdotal advice, offering concrete evidence on where aspiring analysts should focus their efforts to maximize career growth in a competitive landscape.
