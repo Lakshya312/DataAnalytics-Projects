@@ -181,6 +181,10 @@ sentiment_analysis = sentiment_analysis[sentiment_analysis['Release Year'] > 200
 barGraph = px.bar(sentiment_analysis, x="Release Year", y="Total Count", color="Sentiment", title="Sentiment Analysis of Content on Netflix")
 barGraph.show()
 ```
+## Results
+### Content Produced on netflix based on years
+![Visualizatoion of top skills for data nerds](/4_Netflix_Project/images/sentiment_analysis.png)
+
 ## Insights
 * Positive Tone: The majority of content descriptions have a Positive or Neutral sentiment, likely to attract viewers.
 
