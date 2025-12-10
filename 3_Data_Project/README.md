@@ -58,7 +58,7 @@ df_US = df[df['job_country'] == 'United States']
 
 **Goal:** To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-**Notebook:** [2_Skills_Demand](/3_Projects/3_Skill_Demand.ipynb)
+**Notebook:** [2_Skills_Demand](/3_Data_Project/3_Skill_Demand.ipynb)
 
 ### Visualize Data
 
@@ -76,7 +76,7 @@ for i, job_title in enumerate(job_titles):
 ```
 
 ## Results
-![Visualizatoion of top skills for data nerds](/3_Projects/images/skill_demand.png)
+![Visualizatoion of top skills for data nerds](/3_Data_Project/images/skill_demand.png)
 
 ## Insights
 
@@ -91,7 +91,7 @@ for i, job_title in enumerate(job_titles):
 
 **Goal:** To analyze how the demand for top data analyst skills evolved throughout 2023. I filtered for Data Analyst positions and grouped the skills by the month of the job postings to identify trends.
 
-**Notebook:** [3_Skills_Trend](/3_Projects/4_Skills_Trend.ipynb)
+**Notebook:** [3_Skills_Trend](/3_Data_Project/4_Skills_Trend.ipynb)
 
 ### Visualize Data
 
@@ -107,7 +107,7 @@ plt.show()
 ```
 
 ## Results
-![Visualizatoion of trending skills](/3_Projects/images/skill_trend.png)
+![Visualizatoion of trending skills](/3_Data_Project/images/skill_trend.png)
 
 ## Insights
 
@@ -121,7 +121,7 @@ plt.show()
 ##  How well do jobs and skills pay for Data Analysts?
 **Goal:** To determine which roles and skills pay the most. I analyzed the salary distributions for common data roles and identified the highest-paying skills for Data Analysts.
 
-**Notebook:** [4_Skills_Analysis](/3_Projects/5_Salary_Analysis.ipynb)
+**Notebook:** [4_Skills_Analysis](/3_Data_Project/5_Salary_Analysis.ipynb)
 
 ### Visualize Data
 
@@ -137,7 +137,7 @@ plt.show()
 ```
 
 ## Results
-![Analysing salary](/3_Projects/images/box_plot.png)
+![Analysing salary](/3_Data_Project/images/box_plot.png)
 
 ## Insights
 
@@ -147,14 +147,14 @@ plt.show()
 
 * Outliers: There are significant high-salary outliers in Data Engineering, indicating that specialized expertise in this field can lead to exceptional compensation.
 
-![Analysing salary](/3_Projects/images/salary_analysis.png)
+![Analysing salary](/3_Data_Project/images/salary_analysis.png)
 
 ## 4. Optimal Skills Analysis
 ## What are the most optimal skills to learn for Data Analysts?
 
 **Goal:** To identify the "optimal" skills to learn—those that are both high demand (easy to get a job) and high paying (good salary). I visualized this by plotting median salary against the percentage of job postings requiring the skill.
 
-**Notebook:** [5_Optimal_Skills](/3_Projects/6_Optimal_Skills.ipynb.ipynb)
+**Notebook:** [5_Optimal_Skills](/3_Data_Project/6_Optimal_Skills.ipynb.ipynb)
 
 ### Visualize Data
 
@@ -168,7 +168,7 @@ plt.show()
 ```
 
 ## Results
-![Visualizatoion of trending skills](/3_Projects/images/optimal_skills.png)
+![Visualizatoion of trending skills](/3_Data_Project/images/optimal_skills.png)
 
 ## Insights
 
